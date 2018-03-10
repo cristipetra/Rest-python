@@ -49,4 +49,4 @@ api.add_resource(UserRegister, '/register')
 
 api.add_resource(TestList, "/list")
 
-#app.run(port=5000)
+app.run(port=5000)
