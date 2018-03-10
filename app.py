@@ -37,9 +37,16 @@ class ItemList(Resource):
     def get(self):
         return {'items': items}
 
+class TestList(Resource):
+    def get(self):
+        return {'items': 'Items received'}
+
+
 api.add_resource(ItemList,'/items')
 
 api.add_resource(Item, '/item/<string:name>')
 api.add_resource(UserRegister, '/register')
+
+api.add_resource(TestList, "/list")
 
 app.run(port=5000)
